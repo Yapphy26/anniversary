@@ -32,7 +32,7 @@ function loadTrack(track_index) {
     curr_track.load(); 
 
     track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
-    track_name.innerHTML = '<h1>' + music_list[track_index].name + '</h1>'; 
+    track_name.innerHTML = '<h2>' + music_list[track_index].name + '</h2>'; 
 
     updateTimer = setInterval(setUpdate, 1000);
     curr_track.addEventListener("ended", nextTrack);
