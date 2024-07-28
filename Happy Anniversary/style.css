@@ -1,0 +1,159 @@
+html, * {
+    margin: 0;
+    padding: 0; 
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+}
+body{
+    background: linear-gradient(75deg,
+    #eeaeca 0%,
+    #94bbe9 100%);
+}
+
+.section {
+    height: 100vh;
+}
+
+.music-player {
+    max-width: 100%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.music-player .track-art {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: auto;
+    background-size: cover;
+}
+
+.music-player .track-art img {
+    width: 300px;
+    height: 300px;
+}
+
+.music-player .track-content {
+    color: #fff;
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+} 
+
+.heart {
+    position: relative;
+}
+
+.heart--outline {
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.heart--outline.filled {
+    color: #e53935; 
+    font-weight: 900;
+}
+
+.heart--float {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    color: #e53935; 
+}
+
+.heart--float.up {
+    animation: slide-out-top 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes slide-out-top {
+    0% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+    100% {
+    transform: translateY(-1000px);
+    opacity: 0;
+    }
+}  
+
+.music-player .track-content .progress-bar { 
+    display: flex; 
+    align-items: center;
+    width: 100%;
+}
+
+.music-player .track-content .progress-bar .current-time,
+.music-player .track-content .progress-bar .total-duration { 
+    width: 52px; /* Adjust this width according to your needs */
+    text-align: center;
+}
+
+.music-player .track-content .progress-bar .seek_slider { 
+    flex: 1; 
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    border-radius: 64px;
+    margin: 0 20px;
+    background: #fff;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.music-player .track-content .progress-bar .seek_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 64px;
+    cursor: pointer;
+}
+
+.music-player .track-content .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.music-player .track-content .buttons i {
+    text-shadow: none;
+    cursor: pointer; 
+    transition: 0.2s all;
+}
+
+.music-player .track-content .buttons i:hover {
+    transform: scale(1.1);
+}
+
+.music-player .track-content .progress-bar .seek_slider:hover { 
+    opacity: 1;
+} 
+
+.music-player .track-content .buttons .playpause-track {
+    text-align: center;
+}
+
+.music-player .layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(221, 221, 221, 0.7);
+    filter: blur(20px);
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: -1;
+}

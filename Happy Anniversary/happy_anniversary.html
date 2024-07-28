@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="section">
+        <div class="music-player">
+            <div class="track-art"></div>
+            <div class="track-content">
+                <div class="track-name"></div>
+                <div class="progress-bar">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" onchange="seekTo()" class="seek_slider" />
+                    <div class="total-duration">00:00</div>
+                </div>
+                <div class="buttons">
+                    <div class="heart">
+                        <i class="heart--outline fa-regular fa-heart fa-2x"></i>
+                        <i class="heart--float fa-solid fa-heart fa-2x"></i>
+                    </div>
+                    <div class="playpause-track" onclick="playpauseTrack()">
+                        <i class="fa fa-play-circle fa-4x"></i>
+                    </div>
+                    <div class="repeat-track" onclick="repeatTrack()">
+                      <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="layer"></div>
+        </div>
+    </div> 
+</body>
+</html>
